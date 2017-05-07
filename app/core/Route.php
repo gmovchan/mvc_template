@@ -14,6 +14,14 @@ class Route
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
         if (!empty($routes[1])) {
+            
+            // если путь содержит GET переменные, то он будет от них очищен, 
+            // чтобы не мешать вызову контроллера, класс Reques их все равно получит
+            if (strripos($routes[1], '?')) {
+                $routes[1] = explode('?', $routes[1]);
+                $routes[1] = $routes[1][0];
+            }
+            
             // делает первую блукву прописной, остальные строчными, потому что 
             // так выглядят названия соответствующих классов и файлов, например AuthModel
             $controllerName = ucfirst(strtolower($routes[1]));
