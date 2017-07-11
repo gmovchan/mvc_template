@@ -17,12 +17,12 @@ class IndexController extends Controller
 
         // переменная содержит название загружаемой страницы для выделения пункта меню
         $this->data['thisPage'] = 'index';
-        $this->data['title'] = '';
-        $this->data['menuTitle'] = '';
+        $this->data['title'] = 'Главная';
+        $this->data['menuTitle'] = 'Главная';
     }
     
     public function getPage()
     {
-        
+        $this->view->generate('/index/index.php', 'indexTemplate.php', $this->data);
     }
 }
