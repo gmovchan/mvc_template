@@ -20,4 +20,9 @@ class IndexController extends Controller
         $this->data['title'] = '';
         $this->data['menuTitle'] = '';
     }
+    
+    public function getPage()
+    {
+        
+    }
 }

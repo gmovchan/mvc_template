@@ -41,8 +41,7 @@ class FrontController
     {
         $this->detectCLImode();
         
-        $controllerName = 'Quote';
-        $redirectPath = $controllerName;
+        $controllerName = 'Index';
         $actionName = 'getPage';
         $keyController = 1;
         $keyAction = 2;
@@ -58,8 +57,7 @@ class FrontController
          * админки, а не основного приложения
          */
         if ($routes[1] === 'admin') {
-            $controllerName = 'Quotes';
-            $redirectPath = 'admin/quotes';
+            $controllerName = 'Index';
             $keyController = 2;
             $keyAction = 3;
             $controllerDirName = 'AdminControllers';
