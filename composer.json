@@ -1,0 +1,19 @@
+{
+    "name": "root/auth",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Grigory Movchan",
+            "email": "grigory08@ya.ru"
+        }
+    ],
+    "require": {
+         "gregwar/captcha": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "app/"
+        }
+    }
+}
